@@ -1,0 +1,158 @@
+.container {
+  max-width: 960px;
+}
+
+/*
+ * Custom translucent site header
+ */
+
+.site-header {
+  background-color: rgba(0, 0, 0, .85);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.site-header a {
+  color: #8e8e8e;
+  transition: color .15s ease-in-out;
+}
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*
+ * Dummy devices (replace them with your own or something else entirely!)
+ */
+
+.product-device {
+  position: absolute;
+  right: 10%;
+  bottom: -30%;
+  width: 300px;
+  height: 540px;
+  background-color: #333;
+  border-radius: 21px;
+  transform: rotate(30deg);
+}
+
+.product-device::before {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 5px;
+}
+
+.product-device-2 {
+  top: -25%;
+  right: auto;
+  bottom: 0;
+  left: 5%;
+  background-color: #e5e5e5;
+}
+
+
+/*
+ * Extra utilities
+ */
+
+.flex-equal > * {
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    flex: 1;
+  }
+}
+
+
+/* 404 page */
+
+.fundo{
+  animation: scales 3s alternate  infinite;
+  transform-origin: center;
+}
+.pao-baixo{
+   animation: rotatepao 14s cubic-bezier(.1,.49,.41,.97)  infinite;
+  transform-origin: center;
+}
+.pao-cima{
+   animation: rotatepao 7s 1s cubic-bezier(.1,.49,.41,.97)  infinite;
+  transform-origin: center;
+}
+.olhos{animation: olhos   2s  alternate  infinite;
+   transform-origin: center;
+}
+
+.left-sparks{animation: left-sparks   4s  alternate  infinite;
+      transform-origin: 150px 156px;
+}
+
+.right-sparks{animation: left-sparks   4s  alternate  infinite;
+      transform-origin: 310px 150px;
+}
+
+.olhos{animation: olhos   2s  alternate  infinite;
+   transform-origin: center;
+}
+@keyframes scales{
+  from { transform: scale(0.98)}
+  to{ transform: scale(1)}
+}
+
+@keyframes rotatepao{
+  0% { transform:  rotate(0deg)}
+  50% , 60%{ transform:  rotate(-20deg)}
+  100%{  transform:  rotate(0deg) }
+ 
+}
+
+@keyframes olhos{
+  0%{
+    transform: rotateX(0deg);
+  }
+   100%{
+    transform: rotateX(30deg);
+  }
+}
+
+@keyframes left-sparks{
+  0%{
+    opacity: 0; 
+  }
+  
+}
+
+
+.main{
+  
+  min-height: 600px;
+  margin: 0px auto;
+  width: auto;
+  max-width: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.path {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: dash 4s   alternate infinite;
+}
+
+@keyframes dash{
+   0%, 30%{
+     fill: 4B4B62;
+    stroke-dashoffset:   0;
+  }
+   80%,100%{
+     fill: transparent;
+    stroke-dashoffset:  -200;
+  }
+   
+  
+}
