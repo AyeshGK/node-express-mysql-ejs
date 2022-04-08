@@ -1,4 +1,4 @@
-# Database Initial Setup
+# Node-Express-MySQL-Ejs Setup
 
 
 ## Installation 
